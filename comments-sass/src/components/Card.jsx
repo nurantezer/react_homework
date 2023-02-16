@@ -1,8 +1,27 @@
-import React from 'react'
+import CardStyle from "../scss/card.module.scss"
 
 const Card = ({data}) => {
   return (
-    <div>Card</div>
+    <div className={CardStyle.container}>
+    {data.map((item) =>{
+        const {id, img, comment,job,name} = item
+        return(
+            <div key={id} className={CardStyle.card}>
+                <h1>{name}</h1>
+                <h3>{job}</h3>
+                <p>{comment}</p>
+                <img src={img} alt={name} />
+                <div className={CardStyle.buttons}>
+                    <button className={CardStyle.like}>👍</button>
+                    <button className={CardStyle.unlike}>👎</button>
+
+                </div>
+
+            </div>
+        )
+    })}
+
+    </div>
   )
 }
 
