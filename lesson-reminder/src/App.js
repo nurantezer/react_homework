@@ -1,14 +1,20 @@
-import Reminder from "./Reminder";
-import {data} from "./data"
+import Lesson from "./pages/Lesson";
+import { data } from "./helper/data";
+import Header from "./components/header/Header";
 
-
+console.log(data);
 function App() {
   return (
-    <div >
-      {data.map(({id, name, hour, image }) =>(
-      <Reminder key={id} name={name} hour={hour} img={image}/>  
-      ))}
-    
+    <div>
+      <Header />
+      <div className="lesson">
+        <div className="bas">Lesson Reminder</div>
+        <div className="lesson-card">
+          {data.map((item, index) => {
+            return <Lesson key={index} item={item} />;
+          })}
+        </div>
+      </div>
     </div>
   );
 }
