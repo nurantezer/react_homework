@@ -37,13 +37,13 @@
     }
 }
 
-// @include media-xsm{
-//     .links{
-//         flex-direction: column;
-//     }
-// }
-// @include media-lg{
-//     .links{
-//         flex-direction: row;
-//     }
-// }
+@include media-xsm{
+    .links{
+        flex-direction: column;
+    }
+}
+@include media-lg{
+    .links{
+        flex-direction: row;
+    }
+}
