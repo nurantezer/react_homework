@@ -1,8 +1,10 @@
-import React from 'react'
+import './Header.scss';
 
 const Header = () => {
   return (
-    <div></div>
+    <div className='header'>
+      <span className="text-shadow">Who Are You?</span>
+    </div>
   )
 }
 
