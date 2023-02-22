@@ -1,8 +1,13 @@
 import React from 'react'
+import LessonCard from "../components/LessonCard/LessonCard";
 
-const Lesson = () => {
+const Lesson = ({lessonData}) => {
   return (
-    <div>Lesson</div>
+    <>
+    {lessonData.map((lesson) =>(
+      <LessonCard key={lesson.id} lesson={lesson}/> 
+    ))}
+    </>
   )
 }
 

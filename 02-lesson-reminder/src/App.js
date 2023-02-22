@@ -9,7 +9,7 @@ function App() {
       <Header/>
       <main>
         <div className="container">
-          <Lesson lessondata={data}/>
+          <Lesson lessonData={data}/>
         </div>
       </main>
     </div>
