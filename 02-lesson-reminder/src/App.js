@@ -1,11 +1,17 @@
 import Header from "./components/Header/Header";
-
+import Lesson from "./pages/Lesson";
+import {data} from "./helper/data";
 
 console.log();
 function App() {
   return (
     <div>
       <Header/>
+      <main>
+        <div className="container">
+          <Lesson lessondata={data}/>
+        </div>
+      </main>
     </div>
   );
 }
