@@ -4,9 +4,9 @@ import reactLogo from "../assets/react.svg";
 const Header = () => {
   return (
     <Container>
-      <Image fluid src={reactLogo} width="250px"></Image>
+    <Image fluid src={reactLogo} width="250px"></Image>
     </Container>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
