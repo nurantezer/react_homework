@@ -14,8 +14,8 @@ const LessonCard = ({lesson}) => {
       <p className={LessonStyle.parag}>
       <span className={LessonStyle.span}>Lesson Name:{name}</span>
       </p>
-      <p>
-        <span>Lesson Hour: {hour}</span>
+      <p className={LessonStyle.parag}>
+        <span className={LessonStyle.span}>Lesson Hour: {hour}</span>
       </p>
       </div>
 
