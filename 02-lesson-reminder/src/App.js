@@ -5,7 +5,7 @@ import {data} from "./helper/data";
 console.log();
 function App() {
   return (
-    <div>
+    <div className="app">
       <Header/>
       <main>
         <div className="container">
