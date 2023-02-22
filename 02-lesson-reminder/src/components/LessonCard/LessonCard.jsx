@@ -12,7 +12,7 @@ const LessonCard = ({lesson}) => {
       </div>
       <div className={LessonStyle.text}>
       <p className={LessonStyle.parag}>
-      <span className={LessonStyle.span}>Lesson Name:{name}</span>
+      <span className={LessonStyle.span}>Lesson Name: {name}</span>
       </p>
       <p className={LessonStyle.parag}>
         <span className={LessonStyle.span}>Lesson Hour: {hour}</span>

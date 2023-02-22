@@ -12,3 +12,26 @@
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
+.text{
+    margin-left: 0.5rem;
+}
+.span{
+    margin-bottom: 0.35rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: sandybrown;
+}
+.parag{
+    margin-bottom: 0;
+    font-size: 1rem;
+    color: azure;
+}
+
+@media (max-width: 768px){
+    .lesson{
+        display: grid;
+        place-items: center;
+        flex: 75%;
+        flex-direction: column;
+    }
+}
