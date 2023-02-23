@@ -2,6 +2,7 @@ import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import PlayerCard from "./PlayerCard"
+import {data} from "../helpers/data"
 const CardContainer = () => {
   return (
     <Container className="card-container rounded-4 my-4 p-3">
