@@ -1,11 +1,12 @@
+import Question from "./Question";
 
 
-const InterviewAccord = () => {
-   
-    
+const InterviewAccord = (props) => {
+   const {data} = props;
+    console.log('data', props);
   return (
-    <div >
-       
+    <div className="row">
+       {data.map((item) => <Question key={item.id} {...item}/>)}
     </div>
   )
 }

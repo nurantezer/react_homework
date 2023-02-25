@@ -1,11 +1,17 @@
 import React from 'react'
 
-const Card = () => {
-    
+const Card = ({id, question, answer, icon, handleToogle}) => {
+    console.log('answer' , answer);
     
   return (
     <div className="card">
-      
+      <div className="ques-answer">
+        <h5>
+          {id}.{question}
+        </h5>
+        <button onClick={handleToogle}>{icon}</button>
+      </div>
+      {answer && <p>{answer}</p>}
     </div>
   );
 };
