@@ -1,10 +1,38 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { arrowdown, arrowup } from "../helper/icons";
 import Card from "./Card";
 
 const Question = ({id,question,answer}) => {
-  const [show, setShow] = useState(false)
-  return <div>Question</div>;
+ const [show, setShow] = useState(false);
+  const handleToggle = () => {
+    // if(show){
+    //     setShow(false);
+    // }else{
+    //     setShow(true);
+    // }
+    setShow(!show); //& toglle mantığını not operatörüyle kurmuş olduk
+  };
+
+  return (
+    <div className="card-group">
+      {show ? (
+        <Card
+          id={id}
+          question={question}
+          answer={answer}
+          icon={arrowup}
+          handleToggle={handleToggle}
+        />
+      ) : (
+        <Card
+          id={id}
+          question={question}
+          icon={arrowdown}
+          handleToggle={handleToggle}
+        />
+      )}
+    </div>
+  );
 };
 
 export default Question;

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Card = ({id, question, answer, icon, handleToogle}) => {
+const Card = ({id, question, answer, icon, handleToggle}) => {
     console.log('answer' , answer);
     
   return (
@@ -9,7 +9,7 @@ const Card = ({id, question, answer, icon, handleToogle}) => {
         <h5>
           {id}.{question}
         </h5>
-        <button onClick={handleToogle}>{icon}</button>
+        <button onClick={handleToggle}>{icon}</button>
       </div>
       {answer && <p>{answer}</p>}
     </div>
