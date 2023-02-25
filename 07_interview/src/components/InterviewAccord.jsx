@@ -1,8 +1,12 @@
-import React from 'react'
+import Qestion from "./Qustion"
 
-const InterviewAccord = () => {
+const InterviewAccord = (props) => {
+  const {data} = props
+  console.log("data",props);
   return (
-    <div>InterviewAccord</div>
+    <div className="row">
+      {data.map ((item) => <Qestion key={item.id} {...item}/>)}
+    </div>
   )
 }
 
