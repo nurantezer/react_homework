@@ -5,10 +5,10 @@ const Main = (props) => {
   return (
     <div className="main">
         <div className="card">
-            <img src={img} className="mainİmg" />
+            <img src={img} className="mainİmg" width={250} />
             <h4>{title}</h4>
             <div className="desc">
-            <p>{desc}</p>   //*Burayı butonla kartın boşlukları eşit olsun diye dive aldık
+            <p>{desc}</p>   
             </div>
             <button className="btn">More Detail</button>
         </div>
@@ -19,3 +19,5 @@ const Main = (props) => {
 }
 
 export default Main
+
+//*Burayı butonla kartın boşlukları eşit olsun diye dive aldık 11
