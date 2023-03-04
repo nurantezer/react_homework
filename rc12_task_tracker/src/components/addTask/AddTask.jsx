@@ -1,14 +1,28 @@
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button"
 import { useState } from "react";
-const AddTask = () => {
+import axios from "axios"
+
+const AddTask = ({getTask}) => {
     const [task, setTask] = useState("")
     const [date, setDate] = useState("")
 
     const handleSubmit = (e) => {
         e.preventDefaul()
+        const newTask = { task, date }
+        addNewTask(newTask)
         setDate("")
         setTask("")
+    }
+
+    const addNewTask = async (newTask) => {
+        const url = "https://63516c99dfe45bbd55bfd9a2.mockapi.io/api/tasks";
+        try {
+            await axios.post(url,newTask)
+        } catch (error) {
+            
+        }
+        getTask()
     }
     return (
         <div>
