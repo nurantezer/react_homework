@@ -1,14 +1,9 @@
 import React from 'react'
 
-
 const NewProduct = () => {
-  
-
   return (
-    <div className='container'>
-      
-    </div>
-  );
+    <div>NewProduct</div>
+  )
 }
 
 export default NewProduct
