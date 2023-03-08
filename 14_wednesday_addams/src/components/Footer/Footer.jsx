@@ -1,8 +1,7 @@
-import "./Footer.scss";
 import { useLocation } from "react-router-dom";
-
+import "./Footer.scss";
 const Footer = () => {
-  const {pathname} = useLocation()
+  const { pathname } = useLocation();
   return (
     <>
       <footer
@@ -28,10 +27,10 @@ const Footer = () => {
             <i className="fab fa-github fa-2x"></i>
           </a>
         </div>
-        <div className="copyrigth">&copy; Copyrigth 2023</div>
+        <div className="copyright">&copy; Copyright 2023</div>
       </footer>
     </>
   );
-}
+};
 
-export default Footer
+export default Footer;
