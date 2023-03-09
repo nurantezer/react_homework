@@ -2,7 +2,7 @@
 
 const CardTotal = () => {
   return (
-    <div>CardTotal</div>
+    <div></div>
   )
 }
 
