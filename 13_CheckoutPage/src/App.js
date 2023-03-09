@@ -1,6 +1,7 @@
 import {BrowserRouter, Route, Routes} from "react-router-dom"
 import Navbar from "./components/Navbar";
 import Main from "./pages/Main";
+import NewProduct from "./pages/NewProduct";
 function App() {
   return (
     <div className="bg-light app">
@@ -8,6 +9,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Main/>} />
+          <Route path="/new-product" element={<NewProduct/>} />
         </Routes>
       </BrowserRouter>
      
