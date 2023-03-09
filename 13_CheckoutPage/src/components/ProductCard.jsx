@@ -12,13 +12,13 @@ const ProductCard = ({ item, getProducts }) => {
      try {
        await axios.put(`${url}/${id}`,{
         ...item,
-        amount: amount-1
+        amount: amount-1,
       })
      } catch (error) {
        getProducts();
      }
     } else {
-      handleRemove()
+      handleRemove();
    }
   }
   
@@ -26,7 +26,7 @@ const ProductCard = ({ item, getProducts }) => {
     try {
       await axios.put(`${url}/${id}`, {
         ...item,
-        amount: amount + 1
+        amount: amount + 1,
       })
     } catch (error) {
       getProducts();
@@ -37,7 +37,7 @@ const ProductCard = ({ item, getProducts }) => {
     try {
       await axios.delete(`${url}/${id}`)
     } catch (error) {
-      getProducts()
+      getProducts();
     }
   }
 

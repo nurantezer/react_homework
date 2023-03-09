@@ -32,7 +32,8 @@ const NewProduct = () => {
         handleChange={handleChange}
         handleSubmit={handleSubmit}
         formData={formData}
-        text="New" />
+        text="New"
+      />
     </div>
   );
 }

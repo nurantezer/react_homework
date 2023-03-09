@@ -24,7 +24,7 @@ const ProductList = () => {
   }
   console.log(products);
   useEffect(() => {
-    getProducts()
+    getProducts();
   }, [])
   
   return (
