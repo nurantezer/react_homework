@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Main from "./pages/Main";
 import NewProduct from "./pages/NewProduct";
 import ProductList from "./pages/ProductList";
+import About from "./pages/About";
 function App() {
   return (
     <div className="bg-light app">
@@ -12,6 +13,7 @@ function App() {
           <Route path="/" element={<Main/>} />
           <Route path="/new-product" element={<NewProduct/>} />
           <Route path="/product-list" element={<ProductList />} />
+          <Route path="/about" element={<About/>} />
           
         </Routes>
       </BrowserRouter>
