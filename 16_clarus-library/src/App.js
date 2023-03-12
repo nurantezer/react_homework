@@ -15,8 +15,8 @@ function App() {
   }, [myTheme])//myTheme değiştikçe storage ve themes güncelenecek. Böylelikle Themeprovidera verdiğimiz theme güncellenmiş olacak. Ve sayfa refresh olduğunda kullanıcının theme tercihi değişmemesi için storage da güncellenmiş oluyor. 
   
   return (
-    <ThemeProvider>
-      <AppRouter/>
+    <ThemeProvider theme={themes}>
+      <AppRouter myTheme={myTheme} setMyTheme={setMyTheme} />{/* statelerimizi approuter aracılığıyla footera yollayacağız */}
     </ThemeProvider>
   );
 }
