@@ -13,7 +13,8 @@ const AppRouter = () => {
       <Navbar currentUser={currentUser} setCurrentUser={setCurrentUser} />
       <GlobalStyles />
       <Routes>
-        <Route path="/" element={<Home/>} />
+        <Route path="/" element={<Home />} />
+        
       </Routes>
     </BrowserRouter>
   );
