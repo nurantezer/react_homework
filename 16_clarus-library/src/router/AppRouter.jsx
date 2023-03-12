@@ -1,8 +1,18 @@
-import React from 'react'
+import { useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Navbar from "../components/navbar/Navbar";
+import { GlobalStyles } from "../styles/Global.styles";
 
-const AppRouter = () => {
+const AppRouter = ({ myTheme, setMyTheme }) => {
+  const [currentUser, setCurrentUser] = useState(sessionStorage.getItem("user"))
   return (
-    <div>AppRouter</div>
+    <BrowserRouter>
+      <Navbar currentUser={currentUser} setCurrentUser={setCurrentUser} />
+      <Routes>
+        
+      </Routes>
+      <GlobalStyles/>
+    </BrowserRouter>
   )
 }
 
