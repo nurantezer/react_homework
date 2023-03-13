@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "../components/navbar/Navbar";
 import { GlobalStyles } from "../styles/Global.styles";
 import Home from "../pages/home/Home";
+import Detail from "../pages/detail/Detail";
 
 const AppRouter = () => {
   const [currentUser, setCurrentUser] = useState(
@@ -14,7 +15,7 @@ const AppRouter = () => {
       <GlobalStyles />
       <Routes>
         <Route path="/" element={<Home />} />
-        
+        <Route path="/detail/:id" element={<Detail/>} />
       </Routes>
     </BrowserRouter>
   );
