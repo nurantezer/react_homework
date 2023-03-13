@@ -7,6 +7,7 @@ const Detail = () => {
     const { state } = useLocation()
     const { id } = useParams()
     console.log(state);
+    console.log(id)
     
   return (
       <DetailContainer>
