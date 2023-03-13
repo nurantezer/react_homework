@@ -6,7 +6,8 @@ import Home from "../pages/home/Home";
 import Detail from "../pages/detail/Detail";
 import Login from "../pages/login/Login";
 import Register from "../pages/register/Register";
-
+import PrivateRouter from "./PrivateRouter";
+import About from "../pages/about/About";
 const AppRouter = () => {
   const [currentUser, setCurrentUser] = useState(
     sessionStorage.getItem("user")
@@ -17,10 +18,15 @@ const AppRouter = () => {
       <GlobalStyles />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login setCurrentUser={setCurrentUser} />} />
-        <Route path="/register" element={<Register/>} />
-        <Route path="/detail/:id" element={<Detail />} />
-        
+        <Route
+          path="/login"
+          element={<Login setCurrentUser={setCurrentUser} />}
+        />
+        <Route path="/register" element={<Register />} />
+        <Route element={<PrivateRouter />}>
+          <Route path="/about" element={<About/>} />
+          <Route path="/detail/:id" element={<Detail />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );
