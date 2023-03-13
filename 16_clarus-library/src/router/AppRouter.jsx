@@ -8,7 +8,8 @@ import Login from "../pages/login/Login";
 import Register from "../pages/register/Register";
 import PrivateRouter from "./PrivateRouter";
 import About from "../pages/about/About";
-const AppRouter = () => {
+import Footer from "../components/footer/Footer";
+const AppRouter = ({myTheme,setMyTheme}) => {
   const [currentUser, setCurrentUser] = useState(
     sessionStorage.getItem("user")
   );
@@ -24,10 +25,12 @@ const AppRouter = () => {
         />
         <Route path="/register" element={<Register />} />
         <Route element={<PrivateRouter />}>
-          <Route path="/about" element={<About/>} />
+          <Route path="/about" element={<About />} />
           <Route path="/detail/:id" element={<Detail />} />
         </Route>
       </Routes>
+      <Footer myTheme={myTheme} setMyTheme={setMyTheme} />
+      {/* statelerimizi footer a yolladık */}
     </BrowserRouter>
   );
 };
