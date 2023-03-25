@@ -3,6 +3,7 @@ import people from './data';
 import { FaChevronLeft, FaChevronRight, FaQuoteRight } from 'react-icons/fa';
 
 const Review = () => {
+  const [index, setIndex] = useState(0)
   return (
     <article className='review'>
       <div className="img-container">
