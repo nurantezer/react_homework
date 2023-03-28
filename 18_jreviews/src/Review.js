@@ -17,7 +17,7 @@ const Review = () => {
   return (
     <article className='review'>
       <div className="img-container">
-        <img src={Image} alt="" />
+        
       </div>
 
     </article>
