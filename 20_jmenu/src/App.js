@@ -32,3 +32,5 @@ function App() {
 }
 
 export default App;
+
+//* 5.satır da new set tekrar eden ürünleri önlüyor
