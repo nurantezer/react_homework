@@ -14,6 +14,7 @@ function App() {
   const [name, setName] = useState('')
   const [list, setList] = useState(getLocalStorage())
   const [isEditing, setIsEditing] = useState(false)
+  const [editID, setEditID] = useState(null)
   const [alert, setAlert] = useState({ show: false, msg: '', type: '' })
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -38,6 +39,25 @@ function App() {
       
       setList([...list, newItem])
       setName('')
+    }
+
+
+    const showAlert = (show = false, type = '', msg = '') => {
+      setAlert({show, type, msg})
+    }
+    const clearList = () => {
+      showAlert(true, 'danger', 'empty list')
+      setList([])
+    }
+    const removeItem = (id) => {
+      showAlert(true, 'danger', 'item removed')
+      setList(list.filter((item) => item.id !== id))
+    }
+    const editItem = (id) => {
+      const specificItem = list.find((item) => item.id === id)
+      setIsEditing(true)
+      setEditID(id)
+      setName(specificItem.title)
     }
 
   }
