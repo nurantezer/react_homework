@@ -8,7 +8,7 @@ const Home = () => {
       <button className="sidebar-toggle" onClick={openSidebar}>
         <FaBars/>
       </button>
-      <button onClick={openModal}>
+      <button onClick={openModal} className="btn">
         show modal
       </button>
     </main>
