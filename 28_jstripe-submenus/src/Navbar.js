@@ -21,7 +21,7 @@ const Navbar = () => {
   return (
     <nav className="nav" onMouseOver={handleSubmenu}>
       <div className="nav-center">
-        <div className="navheader">
+        <div className="nav-header">
           <img src={logo} alt="" className='nav-logo' />
           <button className="btn toggle-btn" onClick={openSidebar}>
             <FaBars/>
