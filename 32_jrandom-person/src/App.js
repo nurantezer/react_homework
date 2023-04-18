@@ -64,7 +64,7 @@ function App() {
       <div className="block">
         <div className="container">
           <img
-            src={(person && person.iamge || defaultImage)}
+            src={(person && person.image) || defaultImage}
             alt="random user"
             className='user-img'
           />
