@@ -60,7 +60,7 @@ function App() {
 
   return (
     <main>
-      <div className="block bgc-black"></div>
+      <div className="block bcg-black"></div>
       <div className="block">
         <div className="container">
           <img
