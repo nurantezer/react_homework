@@ -42,7 +42,12 @@ function App() {
         <div className="underline"></div>
       </div>
       <section className="followers">
-        
+        <div className='container'>
+          {followers.map((follower) => {
+            return <Follower key={follower.id} {...follower} />
+          })}
+        </div>
+
       </section>
     </main>
   )
