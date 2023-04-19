@@ -11,7 +11,7 @@ function App() {
     if (loading) return
     setFollowers(data[page])
   }, [loading, page])
-
+  
   const nextPage = () => {
     setPage((oldPage) => {
       let nextPage = oldPage + 1
