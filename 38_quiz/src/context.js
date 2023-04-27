@@ -8,7 +8,7 @@ const table = {
 }
 
 const API_ENDPOINT = 'https://opentdb.com/api.php?'
- 
+
 const url = ''
 const tempUrl =
   'https://opentdb.com/api.php?amount=10&category=21&difficulty=easy&type=multiple'
@@ -31,7 +31,7 @@ const AppProvider = ({ children }) => {
   const fetchQuestions = async (url) => {
     setLoading(true)
     setWaiting(false)
-    const response = await axios(url).catch((err) => console.log(error))
+    const response = await axios(url).catch((err) => console.log(err))
     if (response) {
       const data = response.data.results
       if (data.length > 0) {
@@ -59,7 +59,6 @@ const AppProvider = ({ children }) => {
       }
     })
   }
-
   const checkAnswer = (value) => {
     if (value) {
       setCorrect((oldState) => oldState + 1)
@@ -75,41 +74,40 @@ const AppProvider = ({ children }) => {
     setCorrect(0)
     setIsModalOpen(false)
   }
-
   const handleChange = (e) => {
     const name = e.target.name
     const value = e.target.value
-    setQuiz({...quiz, [name]: value})
-  } 
-
+    setQuiz({ ...quiz, [name]: value })
+  }
   const handleSubmit = (e) => {
     e.preventDefault()
-    const {amount, category, difficulty} = quiz
+    const { amount, category, difficulty } = quiz
+
+    const url = `${API_ENDPOINT}amount=${amount}&difficulty=${difficulty}&category=${table[category]}&type=multiple`
+    fetchQuestions(url)
   }
 
-  const url = `${API_ENDPOINT}amount=${amount}&difficulty=${difficulty}&category=${table[category]}&type=multiple`
-  fetchQuestions(url)
-
-  return <AppContext.Provider
-    value={{
-      waiting,
-      loading,
-      questions,
-      index,
-      correct,
-      error,
-      isModalOpen,
-      nextQuestion,
-      checkAnswer,
-      closeModal,
-      quiz,
-      handleChange,
-      handleSubmit,
-    }}
-  
-  >
-    {children}
-  </AppContext.Provider>
+  return (
+    <AppContext.Provider
+      value={{
+        waiting,
+        loading,
+        questions,
+        index,
+        correct,
+        error,
+        isModalOpen,
+        nextQuestion,
+        checkAnswer,
+        closeModal,
+        quiz,
+        handleChange,
+        handleSubmit,
+      }}
+    >
+      {children}
+    </AppContext.Provider>
+  )
 }
 // make sure use
 export const useGlobalContext = () => {
@@ -117,3 +115,5 @@ export const useGlobalContext = () => {
 }
 
 export { AppContext, AppProvider }
+
+
