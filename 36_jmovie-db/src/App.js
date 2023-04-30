@@ -1,6 +1,11 @@
+import AppRouter from "./router/AppRouter";
 
 function App() {
-  return <h2>movie DB starter</h2>
+  return (
+    <div>
+      <AppRouter/>
+    </div>
+  )
 }
 
 export default App

@@ -1,4 +1,5 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter as Router } from "react-router-dom";
+import { Switch, Route, Routes } from "react-router-dom";
 import PrivateRouter from './PriviteRouter'
 import SingleMovie from '../pages/SingleMovie'
 import Home from '../pages/Home'
